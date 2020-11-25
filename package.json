@@ -1,0 +1,20 @@
+{
+  "name": "emailvalidation",
+  "version": "1.0.0",
+  "description": "Validate email address",
+  "main": "index.js",
+
+  "directories": {
+    "test": "test"
+  },
+  
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "Halah",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
