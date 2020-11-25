@@ -6,7 +6,27 @@
 
 
 module.exports =  {
-		
+
+	validInput: function(inValue){
+		inValue += "";	//turns all inValues into strings
+		if(inValue.trim() == "" || inValue == 'null' || inValue == 'undefined'){
+			return false;
+		}
+		return true;
+	},
+
+/*
+inputValue					outputValue
+
+""								false
+emailtest@emailtest@us.org		false
+emailtest@us.org	 			true
+abcdefg.org						false
+21212323						false
+
+*/
+
+
 validEmail: function(inValue){
 	let regex =/^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 	const valid = regex.test(inValue);
@@ -15,13 +35,7 @@ validEmail: function(inValue){
 
 
 	
-	validInput: function(inValue){
-		inValue += "";	//turns all inValues into strings
-		if(inValue.trim() == "" || inValue == 'null' || inValue == 'undefined'){
-			return false;
-		}
-		return true;
-	},
+	
 	/*
 zip code testing plan
 Input Value											Output Value
